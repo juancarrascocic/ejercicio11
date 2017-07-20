@@ -18,7 +18,8 @@ $(document).ready(function(){
 		$('#botonPost').on('click', function(){
 			var nombre = $('#Nombre').val();
 			var apellidos = $('#Apellidos').val();
-			
+			$.ajax({data:{Nombre: nombre, Apellidos: apellidos}, method : "POST", url: "miAplicacion.php"}).done
+				(function(){alert("POST AJAX REALIZADO")});
 		})
 		
 	})
